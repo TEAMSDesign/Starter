@@ -21,6 +21,7 @@ There are a couple of ways to download the Starter Kit:
 - Reusable Classes
 - Dark and Light Mode Themes
 - Custom Responsive Components
+- Google Material Icons Integrated
 - ...
 
 ## Project Structure
@@ -36,13 +37,14 @@ Starter/
 ├── fonts/
 ├── html/
 ├── images/
-    └── favicon.ico
+│   └── favicon.ico
 ├── js/
 │   └── app.js
 └── svg/
 ```
 
 ## Browser Support
+...
 
 ## Authors
 Teams Design Hamburg

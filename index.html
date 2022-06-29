@@ -6,40 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starter Kit</title>
     <link type="text/css" rel="Stylesheet" href="css/style.css">
+    <link type="text/css" rel="Stylesheet" href="css/components/header.css">
+    <link type="text/css" rel="Stylesheet" href="css/components/tables.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">Logo</a>
+      <button id="NavbarToggle" class="navbar-toggle" type="button">
+        <span id="menuIcon" class="material-icons">menu</span>
+        <span id="closeIcon"  class="material-icons">close</span>
+      </button>
+      <div id="NavbarCollapse" class="navbar-collapse">
+        <ul>
+          <li>
+            <button href="#" disabled>button 1</button>
+          </li>
+          <li>
+            <button href="#" class="button-primary">button 2</button>
+          </li>
+          <li>
+            <a href="#" type="button">button 3</a>
+          </li>
+          <li>
+            <a href="#" type="button">button 4</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
     <h1 class="text-3xl font-bold underline">Boilerplate Prototype</h1>
     <h2>Boilerplate Prototype</h2>
     <h3>Boilerplate Prototype</h3>
     <h4>Boilerplate Prototype</h4>
     <h5>Boilerplate Prototype</h5>
     <h6>Boilerplate Prototype</h6>
-    <code>button</code>
-    <table>
+
+    <code>
+    export default function EmailTextInput() { <br>
+      const [email, setEmail] = useState(''); <br>
+      const handleChange = (event) => { <br>
+        const updatedEmail = event.target.value; <br>
+        setEmail(updatedEmail); <br>
+      } <br>
+    
+      return ( <br>
+        // JSX <br>
+      ); <br>
+    } <br>
+    </code>
+
+    <table class="table-small">
         <caption>He-Man and Skeletor facts</caption>
         <tr>
-            <td> </td>
-            <th scope="col" class="heman">He-Man</th>
-            <th scope="col" class="skeletor">Skeletor</th>
-        </tr>
-        <tr>
+            <th>Name</td>
             <th scope="row">Role</th>
-            <td>Hero</td>
-            <td>Villain</td>
-        </tr>
-        <tr>
             <th scope="row">Weapon</th>
-            <td>Power Sword</td>
-            <td>Havoc Staff</td>
+            <th scope="row">Dark secret</th>
         </tr>
         <tr>
-            <th scope="row">Dark secret</th>
-            <td>Expert florist</td>
+          <td>He-Man</th>
+          <td>Hero</td>
+          <td>Power Sword</td>
+          <td>Expert florist</td>
+        </tr>
+        <tr>
+            <td>Skeletor</th>
+            <td>Villain</td>
+            <td>Havoc Staff</td>
+            <td>Cries at romcoms</td>
+        </tr>
+        <tr>
+            <td>Skeletor</th>
+            <td>Villain</td>
+            <td>Havoc Staff</td>
             <td>Cries at romcoms</td>
         </tr>
     </table>
-    <button>Button</button>
-    <button class="button-primary">Button</button>
+    <table class="table-default">
+      <caption>He-Man and Skeletor facts</caption>
+      <tr>
+          <th>Name</td>
+          <th scope="row">Role</th>
+          <th scope="row">Weapon</th>
+          <th scope="row">Dark secret</th>
+      </tr>
+      <tr>
+        <td>He-Man</th>
+        <td>Hero</td>
+        <td>Power Sword</td>
+        <td>Expert florist</td>
+      </tr>
+      <tr>
+          <td>Skeletor</th>
+          <td>Villain</td>
+          <td>Havoc Staff</td>
+          <td>Cries at romcoms</td>
+      </tr>
+      <tr>
+          <td>Skeletor</th>
+          <td>Villain</td>
+          <td>Havoc Staff</td>
+          <td>Cries at romcoms</td>
+      </tr>
+  </table>
+  <table class="table-large">
+    <caption>He-Man and Skeletor facts</caption>
+    <tr>
+        <th>Name</td>
+        <th scope="row">Role</th>
+        <th scope="row">Weapon</th>
+        <th scope="row">Dark secret</th>
+    </tr>
+    <tr>
+      <td>He-Man</th>
+      <td>Hero</td>
+      <td>Power Sword</td>
+      <td>Expert florist</td>
+    </tr>
+    <tr>
+        <td>Skeletor</th>
+        <td>Villain</td>
+        <td>Havoc Staff</td>
+        <td>Cries at romcoms</td>
+    </tr>
+    <tr>
+        <td>Skeletor</th>
+        <td>Villain</td>
+        <td>Havoc Staff</td>
+        <td>Cries at romcoms</td>
+    </tr>
+</table>
+
+    <button>Default</button>
+    <button class="button-primary">Primary</button>
+    <button disabled>Default Disabled</button>
+    <button class="button-primary" disabled>Primary Disabled</button>
     <ol>
         <li>Uno</li>
         <li>Dos</li>
@@ -91,11 +197,41 @@
           <div class="one-half column">1/2</div>
           <div class="one-half column">1/2</div>
         </div>
-      </div>
-      
+      </div> 
+  </main>
 
-    <script src="/js/app.js"></script>
+  <footer>
+    Footer
+  </footer>
+   
+</body>
+
+    <script src="./js/app.js"></script>
     <!--  Tailwind -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-</body>
+    <script>
+      // var toggleCollapse = document.getElementById("NavbarCollapse");
+      // var toggleButton = document.getElementById("NavbarToggle");
+      // var menuIcon = document.getElementById("menuIcon");
+      // var closeIcon = document.getElementById("closeIcon");
+      // const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+      // if (mediaQuery.matches) {
+      //   toggleCollapse.style.display = "none";
+      // }
+
+      // toggleButton.addEventListener("click", toggleMenu);
+
+      // function toggleMenu() {
+      //   if (toggleCollapse.style.display === "none") {
+      //     toggleCollapse.style.display = "block";
+      //     menuIcon.style.display = "none";
+      //     closeIcon.style.display = "block";
+      //   } else {
+      //     toggleCollapse.style.display = "none";
+      //     menuIcon.style.display = "block";
+      //     closeIcon.style.display = "none";
+      //   }
+      // }
+    </script>
 </html>

@@ -1,0 +1,214 @@
+header {
+  width: calc(100%);
+  margin: auto;
+  height: 5rem;
+  padding: 1rem 1rem;
+  position: sticky;
+  top: 0;
+  transform: translateZ(1px);
+  z-index: 11;
+  transition: var(--transition-slow);
+  transition-property: transform;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--td-body-bg);
+}
+header.is-hidden {
+  transform: translateY(-8rem) translateZ(1px);
+}
+@media (max-width: 800px) {
+  header.is-hidden {
+    transform: translateY(-24rem) translateZ(1px);
+  }
+}
+nav {
+  width: 100%;
+  height: 100%;
+  /* display: inline-block; */
+  display: flex;
+  background-color: var(--bg-color-header);
+  transition: var(--transition-slow);
+  transition-property: color, background-color;
+  align-items: center;
+  margin-left: var(--td-inner-padding);
+
+  justify-content: space-between;
+}
+nav ul {
+  /* height: 2.5rem; */
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  /* margin: 2rem 4rem 0 0; */
+  transition: var(--transition-fast);
+  transition-property: color, background-color;
+}
+nav ul li:not(:last-child) {
+  margin-right: 1rem;
+  transition: var(--transition-slow);
+  transition-property: transform;
+}
+nav ul li:last-child {
+  /* margin-left: auto; */
+}
+nav ul li:nth-last-child(1) {
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+nav ul li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+nav ul li.is-selected a {
+  font-weight: 700;
+  color: var(--font-color-primary);
+}
+nav ul li a {
+  font-size: 1rem;
+  line-height: calc(var(--line-height) * 2);
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--font-color-secondary);
+  transition: var(--transition-fast);
+  transition-property: color;
+}
+@media(hover: hover) and (pointer: fine) {
+  nav ul li a:hover {
+    color: var(--font-color-primary);
+  }
+}
+
+.nav-overlay {
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 50vw;
+  padding: 14rem 4rem 4rem;
+  background: var(--bg-color-modal);
+  -webkit-backdrop-filter: saturate(180%) blur(2rem);
+  backdrop-filter: saturate(180%) blur(2rem);
+  z-index: 1;
+  transform: translateZ(1px);
+  opacity: 1;
+  pointer-events: auto;
+  transition: var(--transition-slow);
+  transition-property: color, background-color, opacity, -webkit-backdrop-filter, backdrop-filter;
+}
+.nav-overlay.is-hidden {
+  -webkit-backdrop-filter: saturate(100%) blur(0);
+  backdrop-filter: saturate(100%) blur(0);
+  opacity: 0;
+}
+.nav-overlay input {
+  width: 100%;
+  padding: 2rem;
+  color: var(--font-color-secondary);
+  background-color: var(--bg-color-card);
+  transition: var(--transition-fast);
+  transition-property: color, background-color;
+  pointer-events: auto;
+}
+/* .logo {
+  position: absolute;
+  top: 4rem; left: 8rem;
+  transform-origin: left top;
+  z-index: 100;
+} */
+.teams-logo .logo-font path {
+  fill: var(--font-color-primary);
+  transition: var(--transition-fast);
+  transition-property: fill;
+  opacity: 0;
+}
+
+/* @media (max-width: 800px) {
+  header {
+    height: 7rem;
+  }
+  nav ul li a {
+    font-size: 2rem;
+  }
+  .logo {
+    top: 2rem; left: 4rem;
+  }
+  .nav-overlay {
+    height: calc(100vh - 7rem);
+    top: 7rem;
+  }
+}
+@media (max-width: 1280px) {
+  nav ul li:not(:nth-child(1)):not(:last-child) {
+    display: none;
+  }
+  nav ul li:last-child {
+    margin: 0 0 0 auto !important;
+  }
+}
+@media (min-width: 1920px) {
+  header {
+    max-width: 1920px;
+    margin: 0 auto -13rem;
+  }
+} */
+
+.navbar-toggle {
+  display: none;
+}
+
+#closeIcon {
+  display: none;
+}
+
+/* .navbar-collapse {
+  display: block;
+} */
+
+.navbar-collapse ul {
+  margin-bottom: 0;
+}
+
+.navbar-collapse ul button {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {  
+  header {
+    height: 3rem;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    background-color: var(--td-body-bg);
+    width: 100%;
+    height: calc(100vh - 3rem);
+    padding: 1rem 1rem;
+  }
+
+  .navbar-collapse ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-collapse ul button {
+    margin-bottom: 1rem;
+  }
+}
+
+/* custom */
+nav > button {
+  margin-left: var(--td-element-margin);
+  margin-bottom: 0;
+}
