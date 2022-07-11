@@ -106,7 +106,12 @@
 /* Dark Mode */
   --td-dark-body-color: #fff;
   --td-dk-body-bg: #212529;
+
+/* Dynamic Variables */
+--font-size-var: 1;
+
 }
+
 
 /* Themes */
 [data-theme="light"] {
@@ -307,10 +312,17 @@ h3, .h3 {
     line-height: clamp(2.5rem,calc(3.333vw + 1rem),4.5rem); 
 }
 
-h4, .h4 { 
+/* h4, .h4 { 
     font-size: clamp(2rem,calc(1.666vw + 1rem),3.5rem); 
-    line-height: clamp(2rem,calc(1.666vw + 1rem),3.5rem); 
+    line-height: clamp((2rem,calc(1.666vw + 1rem),3.5rem));  
+} */
+h4, .h4 { 
+    font-size: clamp(calc(2rem * var(--font-size-var)),calc((1.666vw + 1rem) * var(--font-size-var)),calc(3.5rem * var(--font-size-var))); 
+    line-height: clamp(calc(2rem * var(--font-size-var)),calc((1.666vw + 1rem) * var(--font-size-var)),calc(3.5rem * var(--font-size-var)));  
 }
+/* h4, .h4 { 
+    font-size: calc(3.5rem * var(--font-size-var));
+} */
 
 h5, .h5 { 
     font-size: clamp(1.5rem,calc(1vw + 1rem),2.5rem); 

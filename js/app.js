@@ -29,8 +29,5 @@ function toggleMenu() {
 }
 
 // Dynamic CSS Variables
-const colorInput = document.querySelector('input');
-const colorButton = document.querySelector('button');
-const colorVariable = '--yellow';
 
-colorButton.addEventListener('click'); 
+// Image Resizing
