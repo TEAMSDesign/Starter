@@ -1,3 +1,17 @@
+
+.table-small thead,
+.table-defasmallult tbody,
+.table-small tfoot,
+.table-small tr,
+.table-small th,
+.table-small td {
+    border-color: transparent;
+}
+
+.table-small th {
+    background-color: var(--grey-04);
+}
+
 .table-default tr, .table-default th, .table-default td {
     height: 40px;
 }

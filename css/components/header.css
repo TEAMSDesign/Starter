@@ -1,7 +1,7 @@
 header {
   width: calc(100%);
   margin: auto;
-  height: 5rem;
+  height: 64px;
   padding: 1rem 1rem;
   position: sticky;
   top: 0;
@@ -13,7 +13,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--td-body-bg);
+  background-color: var(--bg-color-header);
 }
 header.is-hidden {
   transform: translateY(-8rem) translateZ(1px);
@@ -76,6 +76,7 @@ nav ul li a {
   color: var(--font-color-secondary);
   transition: var(--transition-fast);
   transition-property: color;
+  padding: 0 30px;
 }
 @media(hover: hover) and (pointer: fine) {
   nav ul li a:hover {
@@ -211,4 +212,8 @@ nav ul li a {
 nav > button {
   margin-left: var(--td-element-margin);
   margin-bottom: 0;
+}
+
+.icon-button {
+  padding: 0 8px;
 }

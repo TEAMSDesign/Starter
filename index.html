@@ -8,13 +8,14 @@
     <link type="text/css" rel="Stylesheet" href="css/style.css">
     <link type="text/css" rel="Stylesheet" href="css/components/header.css">
     <link type="text/css" rel="Stylesheet" href="css/components/tables.css">
+    <link type="text/css" rel="Stylesheet" href="css/templates/microsite.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <a href="#" class="logo">Logo</a>
+      <a href="#" class="logo">Brand Logo</a>
       <button id="NavbarToggle" class="navbar-toggle" type="button">
         <span id="menuIcon" class="material-icons">menu</span>
         <span id="closeIcon"  class="material-icons">close</span>
@@ -22,16 +23,21 @@
       <div id="NavbarCollapse" class="navbar-collapse">
         <ul>
           <li>
-            <button href="#" disabled>button 1</button>
+            <a href="#" type="button">link 1</a>
           </li>
           <li>
-            <button href="#" class="button-primary">button 2</button>
+            <a href="#" type="button">link 2</a>
           </li>
           <li>
-            <a href="#" type="button">button 3</a>
+            <a href="#" type="button">link 3</a>
           </li>
           <li>
-            <a href="#" type="button">button 4</a>
+            <a href="#" type="button">link 4</a>
+          </li>
+          <li>
+            <a class="icon-button" href="#" type="button">
+              <i class="material-icons">search</i>
+            </a>
           </li>
         </ul>
       </div>
@@ -39,170 +45,465 @@
   </header>
 
   <main>
-    <h1 class="text-3xl font-bold underline">Boilerplate Prototype</h1>
-    <h2>Boilerplate Prototype</h2>
-    <h3>Boilerplate Prototype</h3>
-    <h4>Boilerplate Prototype</h4>
-    <h5>Boilerplate Prototype</h5>
-    <h6>Boilerplate Prototype</h6>
+    <div class="hero">
+      <!-- Add image in css file -->
+      <div class="hero__text-container">
+        <h1>The basics of responsive layout</h1>
+        <h4>When adapting the layout grid for larger screens, divide content and elements into columns.</h4>
+        <button class="button-primary">Learn More</button>
+      </div>
+    </div>
 
-    <code>
-    export default function EmailTextInput() { <br>
-      const [email, setEmail] = useState(''); <br>
-      const handleChange = (event) => { <br>
-        const updatedEmail = event.target.value; <br>
-        setEmail(updatedEmail); <br>
-      } <br>
-    
-      return ( <br>
-        // JSX <br>
-      ); <br>
-    } <br>
-    </code>
+    <div class="jumbo-card">
+      <div class="jumbo-card__image-container">
+        <img class="jumbo-card__image" src="./images/default-image.png" alt="">
+      </div>
+      <p class="jubo-card__description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
 
-    <table class="table-small">
-        <caption>He-Man and Skeletor facts</caption>
-        <tr>
-            <th>Name</td>
-            <th scope="row">Role</th>
-            <th scope="row">Weapon</th>
-            <th scope="row">Dark secret</th>
-        </tr>
-        <tr>
-          <td>He-Man</th>
-          <td>Hero</td>
-          <td>Power Sword</td>
-          <td>Expert florist</td>
-        </tr>
-        <tr>
-            <td>Skeletor</th>
-            <td>Villain</td>
-            <td>Havoc Staff</td>
-            <td>Cries at romcoms</td>
-        </tr>
-        <tr>
-            <td>Skeletor</th>
-            <td>Villain</td>
-            <td>Havoc Staff</td>
-            <td>Cries at romcoms</td>
-        </tr>
+  <div class="table__container">
+    <h4>Lorem Ipsum is simply dummy text of the typesetting industry</h4>
+    <table class="table-wide section">
+      <!-- <caption>He-Man and Skeletor facts</caption> -->
+      <tr>
+          <th>Table item name</td>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+      </tr>
+      <tr>
+        <td>Table item name</th>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+      </tr>
+      <tr>
+          <td>Table item name</th>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+      </tr>
+      <tr>
+          <td>Table item name</th>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+      </tr>
+      <tr>
+          <td>Table item name</th>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+      </tr>
     </table>
-    <table class="table-default">
-      <caption>He-Man and Skeletor facts</caption>
-      <tr>
-          <th>Name</td>
-          <th scope="row">Role</th>
-          <th scope="row">Weapon</th>
-          <th scope="row">Dark secret</th>
-      </tr>
-      <tr>
-        <td>He-Man</th>
-        <td>Hero</td>
-        <td>Power Sword</td>
-        <td>Expert florist</td>
-      </tr>
-      <tr>
-          <td>Skeletor</th>
-          <td>Villain</td>
-          <td>Havoc Staff</td>
-          <td>Cries at romcoms</td>
-      </tr>
-      <tr>
-          <td>Skeletor</th>
-          <td>Villain</td>
-          <td>Havoc Staff</td>
-          <td>Cries at romcoms</td>
-      </tr>
-  </table>
-  <table class="table-large">
-    <caption>He-Man and Skeletor facts</caption>
-    <tr>
-        <th>Name</td>
-        <th scope="row">Role</th>
-        <th scope="row">Weapon</th>
-        <th scope="row">Dark secret</th>
-    </tr>
-    <tr>
-      <td>He-Man</th>
-      <td>Hero</td>
-      <td>Power Sword</td>
-      <td>Expert florist</td>
-    </tr>
-    <tr>
-        <td>Skeletor</th>
-        <td>Villain</td>
-        <td>Havoc Staff</td>
-        <td>Cries at romcoms</td>
-    </tr>
-    <tr>
-        <td>Skeletor</th>
-        <td>Villain</td>
-        <td>Havoc Staff</td>
-        <td>Cries at romcoms</td>
-    </tr>
-</table>
+    <div class="paragraph-medium">
+      <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+  </div>
 
-    <button>Default</button>
-    <button class="button-primary">Primary</button>
-    <button disabled>Default Disabled</button>
-    <button class="button-primary" disabled>Primary Disabled</button>
-    <ol>
-        <li>Uno</li>
-        <li>Dos</li>
-        <li>Tres</li>
-    </ol>
-    <form style="width: 100%;">
-        <div class="row">
-          <div class="six columns">
-            <label for="exampleEmailInput">Your email</label>
-            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-          </div>
-          <div class="six columns">
-            <label for="exampleRecipientInput">Reason for contacting</label>
-            <select class="u-full-width" id="exampleRecipientInput">
-              <option value="Option 1">Questions</option>
-              <option value="Option 2">Admiration</option>
-              <option value="Option 3">Can I get your number?</option>
-            </select>
-          </div>
-        </div>
-        <label for="exampleMessage">Message</label>
-        <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-        <label class="example-send-yourself-copy">
+  <div class="horizontal-card">
+    <div class="hotizontal-card__content">
+      <div class="horizontal-card__text-container">
+        <h5>Feature name</h5>
+        <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
+      </div>
+      <div class="horizontal-card__text-container">
+        <h5>Feature name</h5>
+        <p>Many say exploration is part of our destiny, but it’s actually our duty to future generations.</p>
+      </div>
+      <div class="horizontal-card__text-container">
+        <h5>Feature name</h5>
+        <p>We predict too much for the next year and yet far too little for the next ten.</p>
+      </div>
+      <div class="horizontal-card__text-container">
+        <h5>Feature name</h5>
+        <p>Man must explore, and this is exploration at its greatest.</p>
+      </div>
+    </div>
+    <div class="horizontal-card__image-container">
+      <img class="horizontal-card__imgae" src="./images/default-image.png" alt="">
+    </div>
+  </div>
+
+   <div class="table-wide__container">
+    <table class="table-wide table-multiselect">
+      <caption></caption>
+      <tr>
+        <th class="table-multiselect__checkbox-container">
           <input type="checkbox">
-          <span class="label-body">Send a copy to yourself</span>
-        </label>
-        <input class="button-primary" type="submit" value="Submit">
-      </form>
+        </th>
+        <th>Table item name</td>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+        <th scope="row">Value</th>
+      </tr>
+      <tr>
+        <td class="table-multiselect__checkbox-container">
+          <input type="checkbox">
+        </td>
+        <td>Table item name</th>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td class="table-multiselect__checkbox-container">
+          <input type="checkbox">
+        </td>
+        <td>Table item name</th>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+      </tr>
+      <tr>
+        <td class="table-multiselect__checkbox-container">
+          <input type="checkbox">
+        </td>
+        <td>Table item name</th>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+      </tr>
+      <tr>
+        <td class="table-multiselect__checkbox-container">
+          <input type="checkbox">
+        </td>
+        <td>Table item name</th>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+      </tr>
+    </table>
+  </div> 
 
-      <div class="container">
-        <!-- columns should be the immediate child of a .row -->
-        <div class="row">
-          <div class="one column">One</div>
-          <div class="eleven columns">Eleven</div>
+    <div class="icon-card-group">
+      <div class="icon-card">
+        <i class="material-icons">offline_bolt</i>
+        <h5>Feature name</h5>
+        <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
+      </div>
+      <div class="icon-card">
+        <i class="material-icons">face</i>
+        <h5>Feature name</h5>
+        <p>Many say exploration is part of our destiny, But it’s actually our duty to future generations.</p>
+      </div>
+      <div class="icon-card">
+        <i class="material-icons">offline_bolt</i>
+        <h5>Feature name</h5>
+        <p>We predict too much for the next year and yet far too little for the next ten.</p>
+      </div>
+      <div class="icon-card">
+        <i class="material-icons">auto_mode</i>
+        <h5>Feature name</h5>
+        <p>Man must explore, and this is exploration at its greatest.</p>
+      </div>
+    </div>
+
+    <div class="jumbo-image">
+      <img src="./images/default-image.png" alt="">
+    </div>
+
+    <div class="grid-2x1">
+      <div class="grid-text-title">
+        <h3>Lorem Ipsum is simply dummy text of the typesetting industry</h3>
+      </div>
+      <div class="grid-text__child-grid">
+        <p class="grid-text-one">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p class="grid-text-two">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p class="grid-text-three">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <h2>Lorem Ipsum is simply dummy text of the typesetting industry</h2>
+    </div>
+
+    <div class="card-group">
+      <div class="card">
+        <div>
+          <img src="./images/default-image.png" alt="">
         </div>
-      
-        <!-- just use a number and class 'column' or 'columns' -->
-        <div class="row">
-          <div class="two columns">Two</div>
-          <div class="ten columns">Ten</div>
+        <div class="card-text__container">
+          <h5>Card name</h5>
+          <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
         </div>
-      
-        <!-- there are a few shorthand columns widths as well -->
-        <div class="row">
-          <div class="one-third column">1/3</div>
-          <div class="two-thirds column">2/3</div>
+      </div>
+      <div class="card">
+        <div>
+          <img src="./images/default-image.png" alt="">
         </div>
-        <div class="row">
-          <div class="one-half column">1/2</div>
-          <div class="one-half column">1/2</div>
+        <div class="card-text__container">
+          <h5>Card name</h5>
+          <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
         </div>
-      </div> 
+      </div>
+      <div class="card">
+        <div>
+          <img src="./images/default-image.png" alt="">
+        </div>
+        <div class="card-text__container">
+          <h5>Card name</h5>
+          <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <img src="./images/default-image.png" alt="">
+        </div>
+        <div class="card-text__container">
+          <h5>Card name</h5>
+          <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <img src="./images/default-image.png" alt="">
+        </div>
+        <div class="card-text__container">
+          <h5>Card name</h5>
+          <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <img src="./images/default-image.png" alt="">
+        </div>
+        <div class="card-text__container">
+          <h5>Card name</h5>
+          <p>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-scroll">
+      <div class="sticky-content">
+        <img src="./images/default-image.png" alt="">
+        <h3>Lorem Ipsum is simply dummy text</h3>
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      <div class="sticky-scroll-images">
+        <img src="./images/default-image.png" alt="">
+        <img src="./images/default-image.png" alt="">
+        <img src="./images/default-image.png" alt="">
+      </div>
+    </div>
+
+    <div class="grid-2x1 grid-buttons">
+      <div class="grid-buttons__text">
+        <h3>Lorem Ipsum is simply dummy text of the typesetting industry</h3>
+      </div>
+      <div class="grid-buttons__buttons">
+        <button class="button-primary">Primary</button>
+        <button class="button-primary">Secondary</button>
+      </div>
+    </div>
+
+    <div class="large-table__container">
+      <h3>Lorem Ipsum is simply dummy text</h3>
+      <table class="table-small">
+        <caption></caption>
+        <tr>
+          <th>Table item name</td>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+          <th scope="row">Value</th>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+          <td>237</td>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+          <td>262</td>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+          <td>450</td>
+        </tr>
+        <tr>
+          <td>Table item name</th>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+          <td>159</td>
+        </tr>
+        <td>Table item name</th>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+      </tr>
+      <tr>
+        <td>Table item name</th>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+        <td>262</td>
+      </tr>
+      <tr>
+        <td>Table item name</th>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+        <td>450</td>
+      </tr>
+      <tr>
+        <td>Table item name</th>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>Table item name</th>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+        <td>237</td>
+      </tr>
+      </table>
+    </div>
   </main>
 
-  <footer>
-    Footer
-  </footer>
+  <footer></footer>
    
 </body>
 
