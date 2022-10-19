@@ -31,3 +31,21 @@ function toggleMenu() {
 // Dynamic CSS Variables
 
 // Image Resizing
+
+// Tabs
+function openContent(event, areaContent) {
+    var k, tabContent, tabItem;
+    
+    tabContent = document.getElementsByClassName("tab-content");
+    for (k = 0; k < tabContent.length; k++) {
+        tabContent[k].style.display = "none";
+    }
+
+    tabItem = document.getElementsByClassName("tab-item");
+    for (k = 0; k < tabItem.length; k++) {
+      tabItem[k].className = tabItem[k].className.replace(" active", "");
+    }
+
+    document.getElementById(areaContent).style.display = "block";
+    event.currentTarget.className += " active";
+}

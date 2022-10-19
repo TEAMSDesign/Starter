@@ -2,7 +2,7 @@ header {
   width: calc(100%);
   margin: auto;
   height: 64px;
-  padding: 1rem 1rem;
+  padding: var(--narrow-margin);
   position: sticky;
   top: 0;
   transform: translateZ(1px);
@@ -165,12 +165,17 @@ nav ul li a {
   display: none;
 }
 
-/* .navbar-collapse {
-  display: block;
-} */
+.navbar-collapse {
+  background-color: var(--color-white);
+}
 
 .navbar-collapse ul {
+  margin-top: var(--narrow-margin);
   margin-bottom: 0;
+}
+
+.navbar-collapse ul li {
+  margin-bottom: var(--space-1);
 }
 
 .navbar-collapse ul button {
@@ -184,6 +189,8 @@ nav ul li a {
 
   .navbar-toggle {
     display: block;
+    padding: 0;
+    color: var(--color-black);
   }
 
   .navbar-collapse {
@@ -191,20 +198,28 @@ nav ul li a {
     position: absolute;
     top: 3rem;
     left: 0;
-    background-color: var(--td-body-bg);
     width: 100%;
     height: calc(100vh - 3rem);
-    padding: 1rem 1rem;
+    padding: var(--narrow-margin);
   }
 
   .navbar-collapse ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: calc(var(--narrow-margin) / 2);
   }
 
   .navbar-collapse ul button {
     margin-bottom: 1rem;
+  }
+
+  nav ul li a {
+    padding: 0;
+  }
+
+  .navbar-collapse .icon-button {
+    padding: 0;
   }
 }
 

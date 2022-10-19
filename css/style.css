@@ -190,6 +190,7 @@
   --medium-margin: 98px;
   --narrow-margin: 16px;
   --section-margin: 144px;
+  --section-small-margin: 48px;
 
   /* --td-blue: rgba(59, 92, 173, 1);
   --td-brightblue: rgba(0, 114, 189, 1);
@@ -331,10 +332,6 @@
   width: 100%;
   float: left;
   box-sizing: border-box;
-}
-
-.column,
-.columns {
   /* margin-left: 4%; */
 }
 
@@ -611,7 +608,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 2.5rem;
+  height: 49px;
   padding: 0 calc(var(--space-1) / 1);
   color: var(--td-blue);
   text-align: center;
@@ -696,8 +693,8 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 38px;
-  padding: var(--td-inner-padding);
+  height: 44px;
+  padding:calc(var(--space-1) / 2);
   background-color: #fff;
   border: 1px solid #d1d1d1;
   border-radius: 4px;
@@ -719,10 +716,11 @@ textarea {
 }
 
 textarea {
-  min-height: 5rem;
+  height: 117px;
+  min-height: 117px;
   width: 100%;
   resize: vertical;
-  padding: var(--td-inner-padding);
+  padding:calc(var(--space-1) / 2);
 }
 
 input[type="email"]:focus,
