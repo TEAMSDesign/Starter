@@ -29,9 +29,9 @@
 :root {
   /*______  Typography  ______*/
   --initialFontSize: 16px;
-  --initialRatio: 1.3;
+  --initialRatio: 1.28;
 
-  --text-0: calc(var(--baseFontSize) / var(--initialRatio));
+  --text-0: calc(var(--initialFontSize) / var(--initialRatio));
   --text-1: var(--initialFontSize);
   --text-2: calc(var(--text-1) * var(--initialRatio));
   --text-3: calc(var(--text-2) * var(--initialRatio));
@@ -41,23 +41,27 @@
   --text-7: calc(var(--text-6) * var(--initialRatio));
 
   --td-body-font-family: var(--td-font-sans-serif);
-  --td-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --td-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --td-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --td-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --td-body-font-weight: 400;
+  --td-body-line-height: var(--lineheightIncrement); /* must 1.5 */
+  --td-body-color: var(--grey-09);
+  --td-body-bg: var(--color-white);
+  --td-link-color: var(--td-body-color);
+  --td-link-hover-color:  var(--td-body-color);
 
   /*______  Spacing  ______*/
   --initialLineheight: 24px;
-  --lineheightIncrement: 1.5;
+  --lineheightIncrement: 1.22;
 
+  --space-0: calc(var(--space-1) / var(--lineheightIncrement)); /* 20px*/
   --space-1: calc(var(--initialLineheight));
-  --space-2: calc(var(--space-1) * var(--lineheightIncrement));
-  --space-3: calc(var(--space-2) * var(--lineheightIncrement));
-  --space-4: calc(var(--space-3) * var(--lineheightIncrement));
-  --space-5: calc(var(--space-4) * var(--lineheightIncrement));
-  --space-6: calc(var(--space-5) * var(--lineheightIncrement));
-  --space-7: calc(var(--space-6) * var(--lineheightIncrement));
+  --space-2: calc(var(--space-1) * var(--lineheightIncrement)); /* 36 - 31.2*/
+  --space-3: calc(var(--space-2) * var(--lineheightIncrement)); /* 54 - 40.56*/
+  --space-4: calc(var(--space-3) * var(--lineheightIncrement)); /* 81 - 52.728*/
+  --space-5: calc(var(--space-4) * var(--lineheightIncrement)); /* 121.5 */
+  --space-6: calc(var(--space-5) * var(--lineheightIncrement)); /* 182.25 */
+  --space-7: calc(var(--space-6) * var(--lineheightIncrement)); /* 273.375 */
 
   /*______  Color  ______*/
   --baseColor: hsl(var(--lightscaleHueIncrement), var(--lightscaleSaturationIncrement), var(--lightscaleLightnessIncrement));
@@ -144,6 +148,8 @@
   --initialBorderRadius: 8px;
   --initialBorder: 1px;
 
+  --td-border-width: var(--initialBorder)
+
   /* Applied Variables */
   --color-white: #fff;
   --color-black: #000;
@@ -186,11 +192,11 @@
   --link-color: var(--light-01);
   --link-hover-color: var(--light-01);
 
-  --main-margin: 137px;
-  --medium-margin: 98px;
-  --narrow-margin: 16px;
-  --section-margin: 144px;
-  --section-small-margin: 48px;
+  --main-margin: calc(var(--space-6) + var(--space-2));
+  --medium-margin: calc(var(--space-5) + var(--space-1));
+  --narrow-margin: var(--space-1);
+  --section-margin: calc(var(--space-6) + var(--space-2));
+  --section-small-margin: calc(var(--space-5) + var(--space-3))
 
   /* --td-blue: rgba(59, 92, 173, 1);
   --td-brightblue: rgba(0, 114, 189, 1);
@@ -332,7 +338,6 @@
   width: 100%;
   float: left;
   box-sizing: border-box;
-  /* margin-left: 4%; */
 }
 
 .column:first-child,
@@ -377,14 +382,12 @@
   width: 100%;
   margin-left: 0;
 }
-
 .one-third.column {
   width: 33.333333333333333%;
 }
 .two-thirds.column {
   width: 66.666666666666667%;
 }
-
 .one-half.column {
   width: 50%;
 }
@@ -466,39 +469,20 @@ html {
 body {
   margin: 0;
   font-family: var(--td-body-font-family);
-  font-size: var(--td-body-font-size);
+  font-size: var(--text-1);
   font-weight: var(--td-body-font-weight);
   line-height: var(--td-body-line-height);
   color: var(--td-body-color);
-  text-align: var(--td-body-text-align);
   background-color: var(--td-body-bg);
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: var(--color-black);
 }
 main {
-  /* padding: 1.5rem; */
+  padding: 0;
 }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--td-heading-color);
-}
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 0;
@@ -510,37 +494,39 @@ h1, h2, h3, h4, h5, h6,
 
 h1 { 
   font-size: var(--text-7);
-  line-height: 1.2; 
+  line-height: var(--space-7); 
 }
 
 h2 {
   font-size: var(--text-6); 
-  line-height: 1.25;
+  line-height: var(--space-6);
 }
 
 h3 { 
   font-size: var(--text-5);
-  line-height: 1.3; 
+  line-height: var(--space-5); 
 }
 
 h4 { 
   font-size: var(--text-4);
-  line-height: 1.35; 
+  line-height: var(--space-4); 
 }
 
 h5 { 
   font-size: var(--text-3);
-  line-height: 1.5; 
+  line-height: var(--space-3); 
 }
 
 h6 { 
   font-size: var(--text-2);
-  line-height: 1.6; 
+  line-height: var(--space-2); 
 }
 
 p {
+  font-size: var(--text-1);
+  line-height: var(--space-1); 
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: calc(var(--space-2) - var(--space-2) / 2);
 }
 
 abbr[title] {
@@ -553,7 +539,7 @@ abbr[title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: calc(var(--space-2) - var(--space-2) / 2);
   font-style: normal;
   line-height: inherit;
 }
@@ -564,21 +550,19 @@ strong {
 }
 
 mark {
-  padding: 0.1875em;
   background-color: var(--td-highlight-bg);
 }
 
 kbd {
-  padding: 0.1875rem 0.375rem;
-  font-size: 0.875em;
+  font-size: calc(var(--text-1) / 1.8);
   color: var(--td-body-bg);
   background-color: var(--td-body-color);
-  border-radius: 0.25rem;
+  border-radius: 0;
 }
 
 kbd kbd {
   padding: 0;
-  font-size: 1em;
+  font-size: calc(var(--space-2) - var(--space-2) / 2);
 }
 
 /* Fonts
@@ -607,25 +591,25 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display: inline-block;
-  height: 49px;
-  padding: 0 calc(var(--space-1) / 1);
-  color: var(--td-blue);
-  text-align: center;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  white-space: nowrap;
-  border-radius: 0;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-width: var(--td-border-width);
-  border-style: var(--td-border-style);
-  background-color: var(--td-body-bg);
-  border-color: var(--td-blue);
-  border-radius: var(--td-border-radius-sm);
+    display: inline-block;
+    height: calc(var(--space-1) * 2);
+    padding: 0 calc(var(--space-1) / 2);
+    color: var(--color-white);
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+    border-radius: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-width: var(--td-border-width);
+    border-style: var(--border-style);
+    background-color: var(--light-01);
+    border-color: var(--light-01);
+    border-radius: var(--td-border-radius);
 }
-
+ 
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
@@ -634,19 +618,19 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: var(--td-white);
-  border-color: var(--td-grey);
-  background-color: var(--td-grey);
-  outline: 0;
+  color: var(--color-white);
+  border-color: var(--light-05);
+  background-color: var(--light-05);
+  outline: 0; 
 }
 
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: var(--td-grey-01);
-  background-color: var(--baseColor);
-  border-color: var(--baseColor);
+    color: var(--color-white);
+    background-color: var(--light-01);
+    border-color: var(--light-01); 
 }
 
 button.button-primary:hover,
@@ -657,29 +641,52 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: var(--td-white);
-  background-color: var(--td-primary);
-  border-color: var(--td-primary);
+  color: var(--color-white);
+  background-color: var(--light-05);
+  border-color: var(--light-05); 
+}
+
+button.button-secondary,
+input[type="submit"].button-secondary,
+input[type="reset"].button-secondary,
+input[type="button"].button-secondary {
+    color: var(--color-white);
+    background-color: var(--light-05);
+    border-color: var(--light-05); 
+}
+
+button.button-secondary:hover,
+input[type="submit"].button-secondary:hover,
+input[type="reset"].button-secondary:hover,
+input[type="button"].button-secondary:hover,
+button.button-secondary:focus,
+input[type="submit"].button-secondary:focus,
+input[type="reset"].button-secondary:focus,
+input[type="button"].button-secondary:focus {
+  color: var(--color-white);
+  background-color: var(--light-01);
+  border-color: var(--light-01); 
 }
 
 button:disabled,
-button.button-primary:disabled {
-  background-color: var(--td-gray-300);
-  color: var(--td-gray-500);
-  border-color: var(--td-gray-300);
-  cursor: not-allowed;
+button.button-primary:disabled,
+button.button-secondary:disabled {
+    background-color: var(--grey-03);
+    color: var(--grey-05);
+    border-color: var(--grey-03);
+    cursor: not-allowed;
 }
 
-[role="button"] {
-  cursor: pointer;
+[role=button] {
+    cursor: pointer;
 }
 
 select {
-  word-wrap: normal;
+    word-wrap: normal;
 }
 
 select:disabled {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* Forms
@@ -693,11 +700,11 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 44px;
-  padding:calc(var(--space-1) / 2);
-  background-color: #fff;
-  border: 1px solid #d1d1d1;
-  border-radius: 4px;
+  height: calc(var(--space-1) * 2);
+  padding: calc(var(--space-1) / 2);
+  background-color: var(--grey-01);
+  border: 1px solid  var(--grey-01);
+  border-radius: var(--td-border-radius);
   box-shadow: none;
   box-sizing: border-box;
 }
@@ -716,11 +723,12 @@ textarea {
 }
 
 textarea {
-  height: 117px;
-  min-height: 117px;
+  height: var(--space-7);
+  min-height: calc(var(--space-1) * 2);
   width: 100%;
   resize: vertical;
-  padding:calc(var(--space-1) / 2);
+  padding: calc(var(--space-1) / 2);
+  font-family: var(--td-font-sans-serif);
 }
 
 input[type="email"]:focus,
@@ -732,7 +740,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid var(--td-primary);
+  border: 1px var(--border-style) var(--grey-01);
   outline: 0;
 }
 
@@ -763,7 +771,7 @@ input[type="radio"] {
 
 label > .label-body {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: calc(var( --space-1) / 3);
   font-weight: normal;
 }
 
@@ -798,7 +806,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: calc(var(--space-1) - var(--space-1) / 2);
 }
 
 ul ul,
@@ -813,12 +821,12 @@ dt {
 }
 
 dd {
-  margin-bottom: 0.5rem;
+  margin-bottom: calc(var( --space-1) / 3);
   margin-left: 0;
 }
 
 li {
-  margin-bottom: 1rem;
+  margin-bottom: calc(var(--space-1) - var(--space-1) / 2);
 }
 
 /* Code
@@ -826,9 +834,9 @@ li {
 pre {
   display: block;
   margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-  font-size: 0.875em;
+  margin-bottom: calc(var(--space-1) - var(--space-1) / 2);
+  /* overflow: auto; */
+  font-size: calc(var(--text-1) / 1.8);
 }
 pre code {
   font-size: inherit;
@@ -837,8 +845,8 @@ pre code {
 }
 
 code {
-  font-size: 0.875em;
-  color: var(--td-code-color);
+  font-size: calc(var(--text-1) / 1.8);
+  color: var(--td-body-color);
   word-wrap: break-word;
 }
 a > code {
@@ -863,11 +871,11 @@ table {
 }
 
 caption {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: calc(var(--space-1) - var(--space-1) / 2);
+  padding-bottom: calc(var(--space-1) - var(--space-1) / 2);
   color: rgba(var(--td-body-color-rgb), 0.75);
   text-align: left;
-  font-size: 14px;
+  font-size: calc(var(--text-1) / 1.14);
 }
 
 thead,
@@ -876,23 +884,21 @@ tfoot,
 tr,
 th,
 td {
-  /* border-color: inherit;
-    border-style: solid; */
   border-bottom: 1px solid black;
   font-weight: normal;
   text-align: left;
   white-space: nowrap;
-  padding: 0 8px;
+  padding: 0 calc(var(--space-1) / 3);
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 24px;
-  font-size: 16px;
+  font-size: var(--text-1);
   height: 64px;
 }
 
 th {
-  border-bottom: 1px solid var(--td-gray-500);
-  background-color: var(--td-gray-300);
+  border-bottom: 1px solid var(--grey-03);
+  background-color: var(--grey-03);
   z-index: 2;
   cursor: pointer;
   font-weight: bold;
@@ -901,24 +907,24 @@ th {
 tr {
   position: relative;
   cursor: pointer;
-  height: 40px;
+  height: calc(var(--space-1) * 2);
 }
 
 tr:nth-child(even) {
-  background-color: var(--td-gray-100);
+  background-color:  var(--grey-02);
 }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 .button {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-1)
 }
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-1);
 }
 pre,
 blockquote,
@@ -929,7 +935,7 @@ p,
 ul,
 ol,
 form {
-  margin: 0 0 1rem;
+  margin: 0 0 calc(var(--space-1) - var(--space-1) / 2);
 }
 
 /* Utilities
@@ -952,7 +958,7 @@ form {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin: 1rem 0;
+  margin: calc(var(--space-1) - var(--space-1) / 2) 0;
   color: inherit;
   border: 0;
   border-top: 1px solid;
@@ -979,21 +985,20 @@ Note: ...
 
 /*** Mobile First ***/
 /* Larger than mobile */
-@media (min-width: var(--media-size-s)) {}
+@media (min-width: 576px) {}
 
 /* Larger than tablet */
-@media (min-width: var(--media-size-m)) {}
+@media (min-width: 768px) {}
 
 /* Larger than desktop */
-@media (min-width: var(--media-size-l)) {}
+@media (min-width: 992px) {}
 
 /* Larger than Desktop HD */
-@media (min-width: var(--media-size-xl)) {}
+@media (min-width: 1200px) {}
 
 /*** Desktop First ***/
 /* Smaller than Desktop HD */
 @media (max-width: 1200px) {
-  /* h1 { font-size: 4.5rem; line-height: 1.2; } */
 }
 
 /* Smaller than desktop */

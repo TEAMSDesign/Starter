@@ -49,6 +49,8 @@
       <!-- Add image in css file -->
       <div class="hero__text-container">
         <h1>The basics of responsive layout</h1>
+        <h2>The basics of responsive layout</h2>
+        <h3>When adapting the layout grid for larger screens, divide content and elements into columns.</h3>
         <h4>When adapting the layout grid for larger screens, divide content and elements into columns.</h4>
         <button class="button-primary">Learn More</button>
       </div>
@@ -69,68 +71,64 @@
           <button class="tab-item" disabled onclick="openContent(event, 'tab3')">Tab 3</button>
       </div>
       <div id="tab1" class="tab-content" style="display: block;">
-        <!-- <div class="table__container"> -->
-          <table class="table-wide section">
-            <!-- <caption>He-Man and Skeletor facts</caption> -->
-            <tr>
-                <th>Table item name</td>
-                <th scope="row">Value</th>
-                <th scope="row">Value</th>
-                <th scope="row">Value</th>
-            </tr>
-            <tr>
-              <td>Table item name</th>
-              <td>159</td>
-              <td>159</td>
-              <td>159</td>
-            </tr>
-            <tr>
-                <td>Table item name</th>
-                <td>237</td>
-                <td>237</td>
-                <td>237</td>
-            </tr>
-            <tr>
-                <td>Table item name</th>
-                <td>262</td>
-                <td>262</td>
-                <td>262</td>
-            </tr>
-            <tr>
-                <td>Table item name</th>
-                <td>450</td>
-                <td>450</td>
-                <td>450</td>
-            </tr>
-          </table>
-          <div class="paragraph-medium">
+        <table class="table-wide table-border">
+          <tr>
+            <th>Table item name</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+          </tr>
+        </table>
+        <div class="paragraph-medium">
             <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          </div>
-        <!-- </div> -->
+        </div>
       </div>
       <div id="tab2" class="tab-content">
-        <table class="table-wide section">
-          <!-- <caption>He-Man and Skeletor facts</caption> -->
+        <table class="table-wide  table-border">
           <tr>
-              <th>Table item name</td>
+              <th>Table item name</th>
               <th scope="row">Value</th>
               <th scope="row">Value</th>
               <th scope="row">Value</th>
           </tr>
           <tr>
-            <td>Table item name</th>
+            <td>Table item name</td>
             <td>159</td>
             <td>159</td>
             <td>159</td>
           </tr>
           <tr>
-              <td>Table item name</th>
+              <td>Table item name</td>
               <td>237</td>
               <td>237</td>
               <td>237</td>
           </tr>
           <tr>
-              <td>Table item name</th>
+              <td>Table item name</td>
               <td>450</td>
               <td>450</td>
               <td>450</td>
@@ -168,13 +166,13 @@
   </div>
 
    <div class="table-wide__container">
-    <table class="table-wide table-multiselect">
+    <table class="table-wide table-multiselect table-border">
       <caption></caption>
       <tr>
         <th class="table-multiselect__checkbox-container">
           <input type="checkbox">
         </th>
-        <th>Table item name</td>
+        <th>Table item name</th>
         <th scope="row">Value</th>
         <th scope="row">Value</th>
         <th scope="row">Value</th>
@@ -187,9 +185,9 @@
       </tr>
       <tr>
         <td class="table-multiselect__checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" />
         </td>
-        <td>Table item name</th>
+        <td>Table item name</td>
         <td>237</td>
         <td>237</td>
         <td>237</td>
@@ -202,9 +200,9 @@
       </tr>
       <tr>
         <td class="table-multiselect__checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" />
         </td>
-        <td>Table item name</th>
+        <td>Table item name</td>
         <td>262</td>
         <td>262</td>
         <td>262</td>
@@ -217,9 +215,9 @@
       </tr>
       <tr>
         <td class="table-multiselect__checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" />
         </td>
-        <td>Table item name</th>
+        <td>Table item name</td>
         <td>450</td>
         <td>450</td>
         <td>450</td>
@@ -232,9 +230,9 @@
       </tr>
       <tr>
         <td class="table-multiselect__checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" />
         </td>
-        <td>Table item name</th>
+        <td>Table item name</td>
         <td>159</td>
         <td>159</td>
         <td>159</td>
@@ -272,7 +270,7 @@
     </div>
 
     <div class="jumbo-image">
-      <img src="./images/default-image.png" alt="">
+      <img src="./images/default-image.png" alt="" />
     </div>
 
     <div class="grid-2x1">
@@ -293,7 +291,7 @@
     <div class="card-group">
       <div class="card">
         <div>
-          <img src="./images/default-image.png" alt="">
+          <img src="./images/default-image.png" alt="" />
         </div>
         <div class="card-text__container">
           <h4>Card name</h4>
@@ -302,7 +300,7 @@
       </div>
       <div class="card">
         <div>
-          <img src="./images/default-image.png" alt="">
+          <img src="./images/default-image.png" alt="" />
         </div>
         <div class="card-text__container">
           <h4>Card name</h4>
@@ -311,7 +309,7 @@
       </div>
       <div class="card">
         <div>
-          <img src="./images/default-image.png" alt="">
+          <img src="./images/default-image.png" alt="" />
         </div>
         <div class="card-text__container">
           <h4>Card name</h4>
@@ -320,7 +318,7 @@
       </div>
       <div class="card">
         <div>
-          <img src="./images/default-image.png" alt="">
+          <img src="./images/default-image.png" alt="" />
         </div>
         <div class="card-text__container">
           <h4>Card name</h4>
@@ -329,7 +327,7 @@
       </div>
       <div class="card">
         <div>
-          <img src="./images/default-image.png" alt="">
+          <img src="./images/default-image.png" alt="" />
         </div>
         <div class="card-text__container">
           <h4>Card name</h4>
@@ -338,7 +336,7 @@
       </div>
       <div class="card">
         <div>
-          <img src="./images/default-image.png" alt="">
+          <img src="./images/default-image.png" alt="" />
         </div>
         <div class="card-text__container">
           <h4>Card name</h4>
@@ -349,14 +347,14 @@
 
     <div class="sticky-scroll">
       <div class="sticky-content">
-        <img src="./images/default-image.png" alt="">
+        <img src="./images/default-image.png" alt="" />
         <h3>Lorem Ipsum is simply dummy text</h3>
         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div class="sticky-scroll-images">
-        <img src="./images/default-image.png" alt="">
-        <img src="./images/default-image.png" alt="">
-        <img src="./images/default-image.png" alt="">
+        <img src="./images/default-image.png" alt="" />
+        <img src="./images/default-image.png" alt="" />
+        <img src="./images/default-image.png" alt="" />
       </div>
     </div>
 
@@ -366,184 +364,185 @@
       </div>
       <div class="grid-buttons__buttons">
         <button class="button-primary">Primary</button>
-        <button class="button-primary">Secondary</button>
+        <button class="button-secondary">Secondary</button>
       </div>
     </div>
 
     <div class="large-table__container">
       <h4>Lorem Ipsum is simply dummy text</h4>
       <div class="large-table__table-content">
-      <table class="table-small">
-        <caption></caption>
-        <tr>
-          <th>Table item name</td>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-          <th scope="row">Value</th>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-          <td>237</td>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-          <td>262</td>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-          <td>450</td>
-        </tr>
-        <tr>
-          <td>Table item name</th>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-          <td>159</td>
-        </tr>
-        <td>Table item name</th>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-      </tr>
-      <tr>
-        <td>Table item name</th>
-        <td>262</td>
-        <td>262</td>
-        <td>262</td>
-        <td>262</td>
-        <td>262</td>
-        <td>262</td>
-        <td>262</td>
-        <td>262</td>
-        <td>262</td>
-      </tr>
-      <tr>
-        <td>Table item name</th>
-        <td>450</td>
-        <td>450</td>
-        <td>450</td>
-        <td>450</td>
-        <td>450</td>
-        <td>450</td>
-        <td>450</td>
-        <td>450</td>
-        <td>450</td>
-      </tr>
-      <tr>
-        <td>Table item name</th>
-        <td>159</td>
-        <td>159</td>
-        <td>159</td>
-        <td>159</td>
-        <td>159</td>
-        <td>159</td>
-        <td>159</td>
-        <td>159</td>
-        <td>159</td>
-      </tr>
-      <tr>
-        <td>Table item name</th>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-        <td>237</td>
-      </tr>
-      </table>
-    </div>
+        <table class="table-small">
+          <caption></caption>
+          <tr>
+            <th>Table item name</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+            <th scope="row">Value</th>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+            <td>262</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+            <td>450</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+            <td>159</td>
+          </tr>
+          <tr>
+            <td>Table item name</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+            <td>237</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div class="form__conatiner">
@@ -551,16 +550,16 @@
       <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula</p>
       <form action="">
         <label for="">Label</label>
-        <input type="text" placeholder="Input text">
+        <input type="text" placeholder="Input text" />
         <label for="">Label</label>
-        <input type="text" placeholder="Input text">
+        <input type="text" placeholder="Input text" />
         <label for="">Label</label>
-        <input type="text" placeholder="Input text">
+        <input type="text" placeholder="Input text" />
         <label for="">Label</label>
         <textarea name="" id="" cols="30" rows="10" placeholder="Input text..."></textarea>
         <div class="form__buttons">
           <button class="button-primary">Primary</button>
-          <button class="button-primary">Secondary</button>
+          <button class="button-secondary">Secondary</button>
         </div>
       </form>
     </div>
