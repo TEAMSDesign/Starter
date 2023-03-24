@@ -109,6 +109,8 @@
   --light-07: hsl(var(--light7H), var(--light7S), var(--light7L));
   --light-08: hsl(var(--light8H), var(--light8S), var(--light8L));
   --light-09: hsl(var(--light9H), var(--light9S), var(--light9L));
+  --light-increment-60: hsl(var(--light1H), var(--light1S), calc(var(--initiallightLightness) + 15%));
+  --light-increment-70: hsl(var(--light1H), var(--light1S), calc(var(--initiallightLightness) + 25%));
   
   --grey-00: #fff;
   --grey-01: hsl(var(--initiallightHue), 17%, 98%);
