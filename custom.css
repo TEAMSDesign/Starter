@@ -1,0 +1,18 @@
+:root {
+    /*______  Typography  ______*/
+    --initialFontSize: 16px;
+    --initialRatio: 1.3;
+
+    /*______  Spacing  ______*/
+    --initialLineheight: 16px;
+    --lineheightIncrement: 1.22;
+
+    /*______  Color  ______*/
+    --initiallightHue: 223;
+    --initiallightSaturation: 49%;
+    --initiallightLightness: 45%;
+    
+    /*______  Layout  ______*/
+    --initialBorderRadius: 0px;
+    --initialBorder: 1px;
+}
