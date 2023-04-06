@@ -15,4 +15,7 @@
     /*______  Layout  ______*/
     --initialBorderRadius: 0px;
     --initialBorder: 1px;
+
+    /*  Default Light Mode  */
+    --font-sans-serif: Gotham, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
